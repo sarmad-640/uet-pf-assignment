@@ -6,5 +6,5 @@ main(){
     cout<<"Enter age (in years) : ";
     cin>>a;
     d = a*365;
-    cout<<"hours to seconds is : "<< d;
+    cout<<"age in days is : "<< d;
 }

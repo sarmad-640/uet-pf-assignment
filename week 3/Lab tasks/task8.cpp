@@ -6,5 +6,5 @@ main(){
     cout<<"Enter voltage (in volts) and current (in amperes) : ";
     cin>>v>>c;
     p = v*c;
-    cout<<"hours to seconds is : "<< p;
+    cout<<"The power in watts is : "<< p;
 }

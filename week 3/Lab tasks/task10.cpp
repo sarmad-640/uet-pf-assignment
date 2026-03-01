@@ -6,5 +6,5 @@ main(){
     cout<<"Enter wins, draws, losses : ";
     cin>>w>>d>>l;
     p = w*3 + d*1 + l*0;
-    cout<<"hours to seconds is : "<< d;
+    cout<<"Total points : "<< p;
 }
