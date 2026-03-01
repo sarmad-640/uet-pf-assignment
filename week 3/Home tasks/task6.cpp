@@ -11,8 +11,8 @@ main(){
     cin>>ab;
     cf = cb/fb;    
     cout<<"Cost of fertilizer per pound: $";
-    cin>>cf;
+    cout<<cf;
     cs = cb/ab;
-    cout<<"Cost of fertilizer per foot: $";
-    cin>>cs;
+    cout<<"\nCost of fertilizer per foot: $";
+    cout<<cs;
 }

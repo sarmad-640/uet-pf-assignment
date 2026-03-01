@@ -13,13 +13,15 @@ main(){
     cout<<"Enter the number of adult ticket sold: ";
     cin>>ats;
     cout<<"Enter the number of child ticket sold: ";
-    cin>>ats;
+    cin>>cts;
     cout<<"Enter the percentage of amount to be donated to charity: ";
     cin>>ca;
     cout<<"------------------------------------"<<endl;
     cout<<"Movie: "<<mn<<endl;
-    cout<<"Total Amount Generated from ticket sales: $"<<(atp*ats)+(ctp*cts);
-    cout<<"Donation to charity: $"<<((atp*ats)+(ctp*cts))*(ca/100);
-    cout<<"Remaining amount after donation: "<<((atp*ats)+(ctp*cts)) - (((atp*ats)+(ctp*cts))*(ca/100));
+    float te = (atp*ats)+(ctp*cts);
+    cout<<"Total Amount Generated from ticket sales: $"<<te;
+    float ce = te*(ca/100.0);
+    cout<<"Donation to charity: $"<<ce;
+    cout<<"Remaining amount after donation: "<<te - ce;
 
 }
