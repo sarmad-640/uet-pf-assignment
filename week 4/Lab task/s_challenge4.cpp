@@ -9,7 +9,38 @@ cin>>letter;
 
 //I have written two versions of this code
 
-//version1:               code that I wrote
+//version1:               code that I wrote initially
+
+if(letter == '0'){
+    cout<<"number";
+}
+if(letter == '1'){
+    cout<<"number";
+}
+if(letter == '2'){
+    cout<<"number";
+}
+if(letter == '3'){
+    cout<<"number";
+}
+if(letter == '4'){
+    cout<<"number";
+}
+if(letter == '5'){
+    cout<<"number";
+}
+if(letter == '6'){
+    cout<<"number";
+}
+if(letter == '7'){
+    cout<<"number";
+}
+if(letter == '8'){
+    cout<<"number";
+}
+if(letter == '9'){
+    cout<<"number";
+}
 
 if(letter == 'a'){
     cout<<"vowel";
@@ -26,12 +57,7 @@ if(letter == 'o'){
 if(letter == 'u'){
     cout<<"vowel";
 }
-if(letter >= '0'){
-    cout<<"number";
-}
-if(letter <= '9'){
-    cout<<"number";
-}
+
 if(letter == 'b'){
     cout<<"consonent";
 }
