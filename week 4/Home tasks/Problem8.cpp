@@ -48,3 +48,71 @@ if(num == 100){t2 = "one hundred";}
 cout<<t2<<" "<<t1;
 
 }
+
+
+
+
+
+
+
+
+
+/* version 2 better logic 
+
+#include<iostream>
+using namespace std;
+
+main()
+{
+    cout <<"Enter number [0 - 100]: ";
+    int n;
+    cin >> n;
+
+    int tenth;
+    tenth = n / 10;
+    string a2;
+
+    int ones;
+    ones = n % 10;
+    string a1;
+
+
+
+
+    if(n == 0){ a1 = "Zero"; }
+    if(ones == 1){ a1 = "One"; }
+    if(ones == 2){ a1 = "Two";}
+    if(ones == 3){ a1 = "Three";}
+    if(ones == 4){ a1 = "Four"; }
+    if(ones == 5){ a1 = "Five"; }
+    if(ones == 6){ a1 = "Six";}
+    if(ones == 7){ a1 = "Seven";}
+    if(ones == 8){ a1 = "Eight";} 
+    if(ones == 9){ a1 = "Nine";}
+    if(n == 10){ a1 = "Ten";}
+
+    if(n == 11){ a1= "Eleven";}
+    if(n == 12){ a1= "Twelve";}
+    if(n == 13){ a1= "Thirteen";}
+    if(n == 14){ a1= "Fourteen";}
+    if(n == 15){ a1= "Fiveteen";}
+    if(n == 16){ a1= "Sixteen";}
+    if(n == 17){ a1= "Seventeen";}
+    if(n == 18){ a1= "Eighteen";}
+    if(n == 19){ a1= "Nineteen";}
+
+    if(tenth == 2){ a2 = "Twenty";}
+    if(tenth == 3){ a2 = "Thirty";}
+    if(tenth == 4){ a2 = "Forty"; }
+    if(tenth == 5){ a2 = "Fivty"; }
+    if(tenth == 6){ a2 = "Sixty";}
+    if(tenth == 7){ a2 = "Seventy";}
+    if(tenth == 8){ a2 = "Eighty";} 
+    if(tenth == 9){ a2 = "Ninety";}
+    if(tenth == 10){ a2= "Hundred";}
+
+    cout <<a2<<" "<<a1;    
+}
+
+
+*/

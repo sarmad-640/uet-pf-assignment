@@ -9,7 +9,7 @@ cin>>letter;
 
 //I have written two versions of this code
 
-//version1:               code that I wrote initially
+//version1:               code that I wrote initially without logical operators nested if and else ifs etc only simple if statements
 
 if(letter == '0'){
     cout<<"number";
