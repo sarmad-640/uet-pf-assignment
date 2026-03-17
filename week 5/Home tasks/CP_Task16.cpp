@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-#include <iomanip>
 
 main(){
    for(int i=1;i<=5;i++){

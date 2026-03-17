@@ -6,15 +6,10 @@ using namespace std;
 main()
 {
 
-    
-        cout << "Enter choice(1-6): ";
-        int choice;
-        cin >> choice;
-
-    while (choice!=6)
+    while (true)
     {
 
-        cout << "\n----------Library Management System-----------\n";
+        cout << "\n----------Calculator Management System-----------\n";
         cout << "1. Addition\n";
         cout << "2. Subtraction\n";
         cout << "3. Multiplication\n";
@@ -23,9 +18,10 @@ main()
         cout << "6. Exit\n";
 
         cout << "Enter choice(1-6): ";
+        int choice;
         cin >> choice;
 
-        if (choice == true)
+        if (choice >=1 && choice<=6)
         {
             cout << "Enter first number: ";
             int num1;
@@ -34,22 +30,21 @@ main()
             int num2;
             cin >> num2;
 
-            int result;
             if (choice == 1)
             {
-                result = num1 + num2;
+                cout<<"result: "<< num1 + num2;
             }
             else if (choice == 2)
             {
-                result = num1 - num2;
+                cout<<"result: "<< num1 - num2;
             }
             else if (choice == 3)
             {
-                result = num1 * num2;
+                cout<<"result: "<< num1 * num2;
             }
             else if (choice == 4)
             {
-                result = num1 / num2;
+                cout<<"result: "<< num1 / num2;
             }
             else if (choice == 5)
             {
@@ -61,6 +56,8 @@ main()
                 cout << "Exiting Calculator. Goodbye!";
                 break;
             }
+        }else{
+            cout<<"Enter a valid choice";
         }
     }
 }
