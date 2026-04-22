@@ -6,23 +6,64 @@ using namespace std;
 int main()
 {
     const int total = 100;
-    string Username[total] = {"test", "testttt"}, User_Password[total] = {"123", "456"};
-    string Destination[total] = {"pakistan", "turkey", "saudi"}, Booking[total][total], Deleted[total][total];
-    int Des_Price[total] = {100, 200, 300}, Booki_Price[total][total], Del_Price[total][total];
-    int des_count = 0;
+
+    // ===== USERS =====
+    string Username[total] = {"ali", "ahmed", "sara"};
+    string User_Password[total] = {"111", "222", "333"};
     int user_count = 0;
+
+    // ===== DESTINATIONS =====
+    string Destination[total] = {"Pakistan", "Turkey", "Saudi", "Dubai", "Malaysia"};
+    int Des_Price[total] = {100, 200, 300, 400, 500};
+    int des_count = 0;
+
+    // ===== BOOKINGS =====
+    string Booking[total][total] = {""};
+    int Booki_Price[total][total] = {0};
+
+    // ===== DELETED BOOKINGS =====
+    string Deleted[total][total] = {""};
+    int Del_Price[total][total] = {0};
+
+    // ===== OTHER =====
     int booking_count[total] = {0};
     int current_user = 0;
     int k = 0;
 
-    Booking[0][0] = {"pakistan"};
-    Booki_Price[0][0] = {100};
-    Booking[1][0] = {"saudi"};
-    Booki_Price[1][0] = {300};
+    // ===== PRE-FILLED BOOKINGS =====
 
-    for (int i = 0; Username[i] != "\0"; i++)
+    // ali bookings
+    Booking[0][0] = "Pakistan";
+    Booki_Price[0][0] = 100;
+
+    Booking[0][1] = "Dubai";
+    Booki_Price[0][1] = 400;
+
+    // ahmed bookings
+    Booking[1][0] = "Saudi";
+    Booki_Price[1][0] = 300;
+
+    // sara bookings
+    Booking[2][0] = "Turkey";
+    Booki_Price[2][0] = 200;
+
+    // sara cancelled booking
+    Deleted[2][0] = "Malaysia";
+    Del_Price[2][0] = 500;
+
+    for (int i = 0; i < total; i++)
     {
-        user_count++;
+        if (Username[i] != "")
+        {
+            user_count++;
+        }
+    }
+    for (int i = 0; i < total; i++)
+    {
+        if (Destination[i] != "")
+        {
+            des_count++;
+        }
     }
     while (true) // Travel Management System main menu
     {
@@ -101,7 +142,7 @@ int main()
                                 cin >> Manage_UserOption;
                                 if (Manage_UserOption == "1")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < user_count; i++)
                                     {
                                         if (Username[i] != "")
@@ -116,7 +157,7 @@ int main()
                                 }
                                 else if (Manage_UserOption == "2")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < user_count; i++)
                                     {
                                         if (Username[i] != "")
@@ -128,14 +169,15 @@ int main()
                                     cout << "Enter the user name you want to delete: ";
                                     string user_name;
                                     cin >> user_name;
-                                    for(int i=0;i<total;i++){
-                                        if(user_name==Username[i]){
+                                    for (int i = 0; i < total; i++)
+                                    {
+                                        if (user_name == Username[i])
+                                        {
                                             Username[i] = "";
                                             User_Password[i] = "";
-
                                         }
                                     }
-                                    cout<<"User Deleted Successfully!";
+                                    cout << "User Deleted Successfully!";
                                     cout << "\nPress any key to continue...";
                                     getch();
                                 }
@@ -168,10 +210,6 @@ int main()
                                     cout << "Enter the number of Destinations to add: ";
                                     int add_count;
                                     cin >> add_count;
-                                    for (int i = 0; Destination[i] != "\0"; i++)
-                                    {
-                                        des_count++;
-                                    }
                                     for (int i = 0; i < add_count; i++)
                                     {
                                         cout << "Enter the destination name and price: ";
@@ -185,13 +223,13 @@ int main()
                                 }
                                 else if (Manage_UsersOption == "2")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < total; i++)
                                     {
                                         if (Destination[i] != "")
                                         {
                                             k++;
-                                            cout <<k<<". "<< Destination[i] << "   " << Des_Price[i] << endl;
+                                            cout << k << ". " << Destination[i] << "   " << Des_Price[i] << endl;
                                         }
                                     }
 
@@ -200,13 +238,13 @@ int main()
                                 }
                                 else if (Manage_UsersOption == "3")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < total; i++)
                                     {
                                         if (Destination[i] != "")
                                         {
                                             k++;
-                                            cout <<k<<". "<< Destination[i] << "   " << Des_Price[i] << endl;
+                                            cout << k << ". " << Destination[i] << "   " << Des_Price[i] << endl;
                                         }
                                     }
                                     cout << "Enter the Destination name to delete or to exit enter -1: ";
@@ -214,14 +252,15 @@ int main()
                                     cin >> del_dest;
                                     if (del_dest != "-1")
                                     {
-                                        for(int i=0;i<total;i++){
-                                            if(del_dest==Destination[i]){
+                                        for (int i = 0; i < total; i++)
+                                        {
+                                            if (del_dest == Destination[i])
+                                            {
                                                 Destination[i] = "";
                                                 Des_Price[i] = 0;
-
                                             }
                                         }
-                                        cout<<"Destination Deleted Successfully!";
+                                        cout << "Destination Deleted Successfully!";
                                     }
 
                                     cout << "\nPress any key to return to previous menu!";
@@ -252,7 +291,7 @@ int main()
                                 cin >> Manage_PackagesOption;
                                 if (Manage_PackagesOption == "1")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < total; i++)
                                     {
                                         for (int j = 0; j < total; j++)
@@ -273,7 +312,7 @@ int main()
                                 }
                                 else if (Manage_PackagesOption == "2")
                                 {
-                                    k=0;
+                                    k = 0;
                                     for (int i = 0; i < user_count; i++)
                                     {
                                         for (int j = 0; j < user_count; j++)
@@ -293,22 +332,26 @@ int main()
                                     cout << "Enter user name followed by the booking naeme you want to delete: ";
                                     string temp_user;
                                     string temp_booking_name;
-                                    cin >> temp_user>>temp_booking_name;
+                                    cin >> temp_user >> temp_booking_name;
 
-                                    int user,booking_name;
-                                    for(int i=0;i<total;i++){
-                                        if(temp_user==Username[i]){
-                                            user=i;
+                                    int user, booking_name;
+                                    for (int i = 0; i < total; i++)
+                                    {
+                                        if (temp_user == Username[i])
+                                        {
+                                            user = i;
                                         }
                                     }
-                                    for(int i=0;i<total;i++){
-                                        if(temp_booking_name==Booking[user][i]){
-                                            booking_name=i;
+                                    for (int i = 0; i < total; i++)
+                                    {
+                                        if (temp_booking_name == Booking[user][i])
+                                        {
+                                            booking_name = i;
                                         }
                                     }
                                     Booking[user][booking_name] = "";
                                     Booki_Price[user][booking_name] = 0;
-                                    cout<<"Successfully removed";
+                                    cout << "Successfully removed";
 
                                     cout << "\nPress any key to continue...";
                                     getch();
@@ -427,7 +470,7 @@ int main()
                     cout << "Enter Password: ";
                     string user_password;
                     cin >> user_password;
-                    for (int i = 0; i <= user_count; i++)
+                    for (int i = 0; i < user_count; i++)
                     {
                         if (username == Username[i] && user_password == User_Password[i])
                         {
@@ -604,6 +647,7 @@ int main()
                                                 if (Booking[current_user][i] == "")
                                                 {
                                                     empty_slot = i;
+                                                    break;
                                                 }
                                             }
                                             int select_pack;
@@ -652,6 +696,7 @@ int main()
                                                     if (Deleted[current_user][i] == "")
                                                     {
                                                         empty_slot = i;
+                                                        break;
                                                     }
                                                 }
                                                 for (int i = 0; i < total; i++)
