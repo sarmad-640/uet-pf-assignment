@@ -1,0 +1,3 @@
+ali,Saudi,45000
+ali,Dubai,63000
+ahmed,Turkey,55000

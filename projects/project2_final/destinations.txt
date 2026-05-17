@@ -1,0 +1,5 @@
+Pakistan,13000
+Turkey,55000
+Saudi,45000
+Dubai,63000
+Malaysia,37000

@@ -1,0 +1,2 @@
+ali,Pakistan,13000
+ahmed,Pakistan,13000
